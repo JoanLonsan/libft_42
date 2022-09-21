@@ -6,7 +6,7 @@
 /*   By: jcrescen <jcrescen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 16:21:21 by jcrescen          #+#    #+#             */
-/*   Updated: 2022/09/21 15:04:27 by jcrescen         ###   ########.fr       */
+/*   Updated: 2022/09/21 15:29:03 by jcrescen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
-calloc
+void	*ft_calloc(size_t count, size_t size);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
