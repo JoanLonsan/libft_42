@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcrescen <jcrescen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 11:02:43 by jcrescen          #+#    #+#             */
-/*   Updated: 2022/09/21 12:31:29 by jcrescen         ###   ########.fr       */
+/*   Created: 2022/09/21 12:55:11 by jcrescen          #+#    #+#             */
+/*   Updated: 2022/09/21 13:05:40 by jcrescen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+void *ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;
 
 	i = 0;
-	if (i < n)
+	if (len == 0)
+		return ((const char*)dst);
+	while (len != 0)
 	{
-		if (((unsigned char*)s1 + i != ((unsigned char)s2 + i))
-			return (((unsigned char*)s1 + i) - ((unsigned char*)s2 + i));
-		i++;
+		(const char*)(dst + (len - 1)) = (const char*)(src + (len - 1));
+		len--;
 	}
-	return (0);
+	return ((const char*)dst);
 }

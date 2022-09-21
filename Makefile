@@ -66,7 +66,9 @@ fclean:	clean
 
 re: fclean all
 
-bonus: $(OBJS) $(BONUS_OBJS)
-	ar crs $(NAME) $(OBJS) $(BONUS_OBJS)
+bonus: $(NAME) $(BONUS_OBJS)
+	ar -crs $(NAME) $(OBJS) $(BONUS_OBJS) libft.h
 
-.PHONY:		all re clean fclean bonus
+rebonus: fclean bonus
+
+.PHONY:		all bonus re rebonus clean fclean
