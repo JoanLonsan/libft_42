@@ -6,7 +6,7 @@
 /*   By: jcrescen <jcrescen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 16:21:21 by jcrescen          #+#    #+#             */
-/*   Updated: 2022/09/21 13:15:18 by jcrescen         ###   ########.fr       */
+/*   Updated: 2022/09/21 15:04:27 by jcrescen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,22 +37,22 @@ putendl_fd
 putnbr_fd
 putstr_fd
 split
-strchr
-strrchr
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 strdup
 striteri
 strjoin
-strlcat
-strlcpy
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *s);
 strmapi
-strncmp
-strnstr
-strrchr
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+
 strtrim
 substr
-tolower
-toupper
+int	ft_tolower(int c);
+int	ft_toupper(int c);
 lstnew
 lstdelone
 lstclear
