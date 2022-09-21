@@ -6,7 +6,7 @@
 /*   By: jcrescen <jcrescen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 12:31:59 by jcrescen          #+#    #+#             */
-/*   Updated: 2022/09/21 13:11:21 by jcrescen         ###   ########.fr       */
+/*   Updated: 2022/09/21 13:14:49 by jcrescen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,4 @@ void *ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return ((const char*)dst);
 }
+
