@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcrescen <jcrescen@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 16:21:21 by jcrescen          #+#    #+#             */
-/*   Updated: 2022/09/21 15:29:03 by jcrescen         ###   ########.fr       */
+/*   Updated: 2022/09/22 15:06:13 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ putstr_fd
 split
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
-strdup
+char    *ft_strdup(const char *s1);
 striteri
 strjoin
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
