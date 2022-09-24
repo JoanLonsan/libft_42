@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 16:21:21 by jcrescen          #+#    #+#             */
-/*   Updated: 2022/09/24 20:25:23 by marvin           ###   ########.fr       */
+/*   Updated: 2022/09/24 21:03:02 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ putchar_fd
 putendl_fd
 putnbr_fd
 putstr_fd
-split
+char    **ft_split(char const *s, char c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char    *ft_strdup(const char *s1);
@@ -48,7 +48,6 @@ size_t	ft_strlen(const char *s);
 strmapi
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
-
 char    *ft_strtrim(char const *s1, char const *set);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
 int 	ft_tolower(int c);
