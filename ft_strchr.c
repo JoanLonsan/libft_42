@@ -6,7 +6,7 @@
 /*   By: jcrescen <jcrescen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 14:44:26 by jcrescen          #+#    #+#             */
-/*   Updated: 2022/09/21 14:50:05 by jcrescen         ###   ########.fr       */
+/*   Updated: 2022/09/27 09:42:56 by jcrescen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == (char)c)
-			return ((char*)(s[i]));
+			return ((char *)(s[i]));
 		i++;
 	}
 	return (NULL);

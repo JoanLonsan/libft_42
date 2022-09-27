@@ -6,7 +6,7 @@
 /*   By: jcrescen <jcrescen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:21:32 by jcrescen          #+#    #+#             */
-/*   Updated: 2022/09/21 15:33:16 by jcrescen         ###   ########.fr       */
+/*   Updated: 2022/09/27 09:22:57 by jcrescen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ void	*ft_calloc(size_t count, size_t size)
 	if (!a)
 		return (NULL);
 	ft_bzero(a, count);
-	return(a);
+	return (a);
 }

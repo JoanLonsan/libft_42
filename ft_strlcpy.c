@@ -6,7 +6,7 @@
 /*   By: jcrescen <jcrescen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 14:11:08 by jcrescen          #+#    #+#             */
-/*   Updated: 2022/09/21 14:29:14 by jcrescen         ###   ########.fr       */
+/*   Updated: 2022/09/27 09:46:21 by jcrescen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	while (src[i])
 		i++;
-	return (i);	
+	return (i);
 }

@@ -6,7 +6,7 @@
 /*   By: jcrescen <jcrescen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 14:30:19 by jcrescen          #+#    #+#             */
-/*   Updated: 2022/09/21 14:38:04 by jcrescen         ###   ########.fr       */
+/*   Updated: 2022/09/27 09:45:46 by jcrescen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	if (dstlen >= size)
 		dstlen = size;
-	return (dstlen + srclen)
+	return (dstlen + srclen);
 }
