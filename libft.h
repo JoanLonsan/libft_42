@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 16:21:21 by jcrescen          #+#    #+#             */
-/*   Updated: 2022/09/27 15:12:28 by marvin           ###   ########.fr       */
+/*   Updated: 2022/09/28 22:57:56 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <stdlib.h>
 # include <ctype.h>
 # include <string.h>
+
+typedef struct      s_list
+{
+    void            *content;
+    struct s_list   *next;
+}                   t_list;
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
