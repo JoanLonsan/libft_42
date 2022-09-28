@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   wip_ft_itoa.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcrescen <jcrescen@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 09:33:34 by jcrescen          #+#    #+#             */
-/*   Updated: 2022/09/21 10:27:09 by jcrescen         ###   ########.fr       */
+/*   Updated: 2022/09/27 15:12:40 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	base_check(int value; int base)
 	}
 }
 
-char *itoa(int value, char *str, int base)
+char *ft_itoa(int n)
 {
 	int	i;
 

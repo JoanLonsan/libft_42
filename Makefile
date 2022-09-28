@@ -53,10 +53,10 @@ ft_lstlast.c
 
 BONUS_OBJS= $(BONUS: .c=.o)
 
-all:		$(NAME)
-
 $(NAME): $(OBJS)
 	ar -crs $(NAME) $(OBJS) libft.h
+
+all:		$(NAME)
 
 clean:
 	$(RM) $(OBJS)

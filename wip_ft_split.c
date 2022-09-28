@@ -32,6 +32,15 @@ static char	ft_splitaux(char const *s, char c)
 	return (t);
 }
 
+static void	ft_free(char **s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+
+}
+
 char    **ft_split(char const *s, char c)
 {
 	size_t	i;
@@ -46,15 +55,16 @@ char    **ft_split(char const *s, char c)
 			i++;
 		j++;
 	}
-	str = (char *)malloc(sizeof (char) * (j + 1));
+	str = (char *)malloc(sizeof (char *s) * (j + 1));
+	if (!str)
+		return (NULL);
 	i = 0;
 	j = 0;
 	while (str[i])
 	{
 		while (s[j] != c)
-		{
-			str[i] = ft_splitaux(s[j], c);
-			free(*str);
-			i++;
+			str[i++] = ft_splitaux(s[j], c);
 	}
+	ft_free(str**);
+	return (str**);
 }
