@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 16:21:21 by jcrescen          #+#    #+#             */
-/*   Updated: 2022/09/28 22:57:56 by marvin           ###   ########.fr       */
+/*   Updated: 2022/09/29 00:49:12 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,10 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-lstnew
+t_list	*ft_lstnew(void *content);
 lstdelone
 lstclear
-lstadd_front
+void	ft_lstadd_front(t_list **lst, t_list *new);
 lstadd_back
 lstsize
 lstiter
