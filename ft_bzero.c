@@ -6,7 +6,7 @@
 /*   By: jcrescen <jcrescen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 09:26:00 by jcrescen          #+#    #+#             */
-/*   Updated: 2022/09/21 09:28:54 by jcrescen         ###   ########.fr       */
+/*   Updated: 2022/09/29 12:29:26 by jcrescen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
-
-	i = 0;
-	if (s[i])
-	{
-		while (i < n)
-		{
-			s[i] = '\0';
-			i++;
-		}
-	}
+	ft_memset(s, '\0', n);
 }

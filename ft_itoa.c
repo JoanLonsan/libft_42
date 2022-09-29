@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   wip_ft_itoa.c                                      :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jcrescen <jcrescen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 09:33:34 by jcrescen          #+#    #+#             */
-/*   Updated: 2022/09/28 23:11:40 by marvin           ###   ########.fr       */
+/*   Updated: 2022/09/29 07:57:14 by jcrescen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ size_t	ft_ilen(int n)
 	return (i);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	size_t	i;
 	char	*str;
@@ -35,7 +35,7 @@ char *ft_itoa(int n)
 	i = ft_ilen(n);
 	str = (char *)malloc(sizeof(char *) * (i + 1));
 	if (!str)
-		return (NULL);4
+		return (NULL);
 	if (n < 0)
 	{
 		str[0] = 45;

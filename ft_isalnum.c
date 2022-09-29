@@ -6,7 +6,7 @@
 /*   By: jcrescen <jcrescen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 21:49:58 by jcrescen          #+#    #+#             */
-/*   Updated: 2022/09/20 21:53:14 by jcrescen         ###   ########.fr       */
+/*   Updated: 2022/09/29 12:44:35 by jcrescen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	return (ft_isdigit || ft_isalpha);
+	return (ft_isdigit(c) || ft_isalpha(c));
 }

@@ -39,7 +39,7 @@ SRC			= ft_memset.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c
 
-OBJS		= $(SRC: .c=.o)
+OBJS		= $(SRC:.c=.o)
 
 BONUS		= ft_lstnew.c \
 			ft_lstdelone.c \
@@ -51,12 +51,13 @@ BONUS		= ft_lstnew.c \
 			ft_lstmap.c \
 			ft_lstlast.c
 
-BONUS_OBJS	= $(BONUS: .c=.o)
-
-$(NAME): $(OBJS)
-	$(AR) $(NAME) $(OBJS) libft.h
+BONUS_OBJS	= $(BONUS:.c=.o)
 
 all:		$(NAME)
+
+$(NAME): $(OBJS)
+	$(AR) $(NAME) $(OBJS)
+
 
 clean:
 	$(RM) $(OBJS)
@@ -68,11 +69,6 @@ fclean:	clean
 re: fclean all
 
 bonus: $(NAME) $(BONUS_OBJS)
-	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) libft.h
+	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
 
-fcleanbonus: clean
-	$(RM) $(BONUS_OBJS) $(NAME)
-
-rebonus: fcleanbonus bonus
-
-.PHONY:		all bonus clean fclean re fcleanbonus rebonus
+.PHONY:		all bonus clean fclean re

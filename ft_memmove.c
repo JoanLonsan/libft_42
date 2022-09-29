@@ -6,7 +6,7 @@
 /*   By: jcrescen <jcrescen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 12:55:11 by jcrescen          #+#    #+#             */
-/*   Updated: 2022/09/27 09:25:57 by jcrescen         ###   ########.fr       */
+/*   Updated: 2022/09/29 12:33:28 by jcrescen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (!dst || !src)
 		return (NULL);
 	if (len == 0)
-		return ((const char *)dst);
+		return (dst);
 	while (len != 0)
 	{
-		(const char *)(dst + (len - 1)) = (const char *)(src + (len - 1));
+		*(char *)(dst + (len - 1)) = *(char *)(src + (len - 1));
 		len--;
 	}
-	return ((const char *)dst);
+	return (dst);
 }

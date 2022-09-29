@@ -14,7 +14,7 @@
 
 static int	ft_isset(char c, char const *set)
 {
-	return (c == set);
+	return (c == *set);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -25,10 +25,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	last;
 
 	i = 0;
-	if (!ft_isset(s1[i++]))
+	while (ft_isset(s1[i++], set))
 	first = i;
 	i = ft_strlen(s1);
-	if (!ft_isset(s1[i--]))
+	while (ft_isset(s1[i--], set))
 	last = i;
 	sc = (char *)malloc(sizeof(char) * (ft_strlen(s1)));
 	if (!sc)
@@ -36,10 +36,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	while (s1[i])
 	{
-		if (s1[i] == first || s1[i] == last)
+		while ((unsigned char)s1[i++] == first || (unsigned char)s1[i] == last)
+		{
+			sc[i] = s1[i];
 			i++;
-		else
-			sc = s1[i++];
+		}
 	}
 	sc[i] = '\0';
 	return (sc);
