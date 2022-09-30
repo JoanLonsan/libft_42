@@ -14,21 +14,17 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == -2147483648)
-	{
-		write (fd, "-2", 2);
-		n = 147483648;
-	}
+	int		sign;
+	char	c;
+
+	sign = 1;
 	if (n < 0)
 	{
-		write (fd, "-", 1);
-		n *= -n;
+		ft_putchar_fd('-', fd);
+		sign *= -1;
 	}
-	if (n <= 9)
-		write(fd, &n, 1);
-	if (n > 9)
-	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
-	}
+	if (n / 10)
+		ft_putnbr_fd((n / 10 * sign), fd);
+	c = '0' + (n % 10) * sign;
+	ft_putchar_fd(c, fd);
 }

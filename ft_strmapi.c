@@ -6,7 +6,7 @@
 /*   By: jcrescen <jcrescen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 10:00:41 by jcrescen          #+#    #+#             */
-/*   Updated: 2022/09/29 12:46:35 by jcrescen         ###   ########.fr       */
+/*   Updated: 2022/09/30 13:47:59 by jcrescen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,16 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*s2;
-	size_t	i;
+	char			*s2;
+	unsigned int	i;
 
+	if (!s || !f)
+		return (NULL);
 	s2 = (char *)malloc(sizeof (*s) * (ft_strlen(s) + 1));
-	if (!s2 || !f)
+	if (!s2)
 		return (NULL);
 	i = 0;
-	while (i < (ft_strlen(s) - 1))
+	while (s[i])
 	{
 		s2[i] = f(i, s[i]);
 		i++;
