@@ -16,7 +16,7 @@ static int	ft_ask_set(char c, char const *set)
 {
 	while (*set)
 		if (c == *set++)
-			ret (1);
+			return (1);
 	return (0);
 }
 

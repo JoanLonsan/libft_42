@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+/*
 static void	ft_split_free(char **s)
 {
 	size_t	i;
@@ -24,7 +25,8 @@ static void	ft_split_free(char **s)
 	}
 	free(s);
 }
-
+*/
+/*
 static int	ft_splitaux(char const *str, char c)
 {
 	int	i;
@@ -44,7 +46,8 @@ static int	ft_splitaux(char const *str, char c)
 	}
 	return (j);
 }
-
+*/
+/*
 static char	*ft_splitted(char *s2, char const *s, size_t i, size_t len)
 {
 	size_t	j;
@@ -61,7 +64,8 @@ static char	*ft_splitted(char *s2, char const *s, size_t i, size_t len)
 	s2[j] = 0;
 	return (s2);
 }
-
+*/
+/*
 static char	**ft_real_split(char const *s, char c, char **s2, size_t splitaux)
 {
 	size_t	i;
@@ -90,7 +94,8 @@ static char	**ft_real_split(char const *s, char c, char **s2, size_t splitaux)
 	s2[j] = 0;
 	return (s2);
 }
-
+*/
+/*
 char	**ft_split(char const *s, char c)
 {
 	char	**s2;
@@ -110,4 +115,62 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	}
 	return (s2);
+}
+*/
+static void	ft_free_split(char **s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		free (s[i++]);
+	free (s);
+}
+
+static size_t	ft_word_len(const char *s, char c)
+{
+	size_t	i;
+
+	i = 0;
+	while (*s)
+	{
+		if (*s != c)
+		{
+			++i;
+			while (*s && *s != c)
+				++s;
+		}
+		else
+			++s;
+	}
+	return (i);
+}
+
+char	**ft_split(const char *s, char c)
+{
+	char	**a;
+	size_t	i;
+	size_t	len;
+
+	i = 0;
+	a = malloc(sizeof(char *) * (ft_word_len(s, c) + 1));
+	if (!a)
+	{
+		ft_free_split(a);
+		return (NULL);
+	}
+	while (*s)
+	{
+		if (*s != c)
+		{
+			len = 0;
+			while (*s && *s != c && len++)
+				++s;
+			a[i++] = ft_substr(s - len, 0, len);
+		}
+		else
+			++s;
+	}
+	a[i] = 0;
+	return (a);
 }
